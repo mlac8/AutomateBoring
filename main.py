@@ -38,4 +38,40 @@ df = pd.read_csv('file.csv')
 
 ###############################################
 
+#syntax i should memorize COLD
 
+with open("file.json", "w") as f:
+    data = json.load(f)
+
+for item in data:
+    print(item["keyh"])
+
+item.get("key")
+item.get("nested, {}").ge("key")
+
+result = []
+result[key] = value
+
+sum(item["numbers"])
+len(item["numbers"])
+
+###########
+
+# DRILL TIME
+
+with open('file.json', 'w') as f:
+    data = json.load(f)
+    for item in data:
+        sum(item["numbers"])
+ ### WRONG what we want to see is
+
+ with open('file.json', 'r') as f:
+     data = json.load(f)
+
+result = []
+for item in data:
+    total = sum(item["scores"])
+    if total > 40:
+        result.append(item["user"]["name"])
+
+print(result)
